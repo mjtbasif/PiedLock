@@ -72,7 +72,7 @@ while i<2:
             toAdd='recipientUsername@gmail.com'
             fromAdd=mailUser
 
-            subject='PiedLock: Alart'
+            subject='PiedLock: Alert'
             header='To: '+toAdd+'\n'+'From: '+fromAdd+'\n'+'Subject: '+subject
 
             print header+'\n'+body
