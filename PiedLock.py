@@ -69,10 +69,10 @@ while i<2:
             msg=tempBody
 	    tempBody=''
 	    
-            mailUser='ablquashem@gmail.com'
-            mailPass='M@sif008'
+            mailUser='username@gmail.com'
+            mailPass='password'
 
-            toAdd='mjtbasif@gmail.com'
+            toAdd='my mail'
             fromAdd=mailUser
 
             subject='PiedLock: Alert'
