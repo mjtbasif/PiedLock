@@ -4,6 +4,9 @@ import os
 
 import smtplib
 
+from twilio.rest import Client
+
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 GPIO.setup(16,GPIO.OUT)
@@ -20,27 +23,27 @@ z=0
 GPIO.setup(22,GPIO.IN)
 a=0
 mFlag=0
-body=''
+msg=''
 tempBody=''
-BedMsg='Bedroom door is open'
-DinningMsg='Dinning door is open'
-MainMsg='Main door is open'
+BedMsg='Left room window is open'
+DinningMsg='Main door is open'
+MainMsg='Right window is open'
 FireMsg='Fiire breakout'
 while i<2:
     if(GPIO.input(16)==True):
-        print "Bedroom door is open"
+        print BedMsg
         tempBody=tempBody+BedMsg+'\n'
         mFlag=1
 	f=1
 	x+=1
     if (GPIO.input(12)==True):
-        print "Dinning door is open"
+        print DinningMsg
         tempBody=tempBody+DinningMsg+'\n'
         mFlag=1
 	f=1
 	y+=1
     if(GPIO.input(10)==True):
-	print "Main door is open"
+	print MainMsg
 	tempBody=tempBody+MainMsg+'\n'
 	mFlag=1
 	f=1
@@ -57,25 +60,25 @@ while i<2:
     else:
 	 print "SECURITY BREACHED"
 	 print "Fire or heat detected for ",a," second" 
-         print "Dinning door was opened for ",y," seconds"
-	 print "Main  door was opened for ",z," seconds"
-	 print "Bedroom  door was opened for ",x," seconds" 
+         print "Right window was opened for",y," seconds"
+	 print "Left window  was opened for ",z," seconds"
+	 print "Main door  was opened for ",x," seconds" 
 
     if(mFlag):
-        if(body!=tempBody):
-            body=tempBody
+        if(msg!=tempBody):
+            msg=tempBody
 	    tempBody=''
 	    
-            mailUser='username@gmail.com'
-            mailPass='password'
+            mailUser='ablquashem@gmail.com'
+            mailPass='M@sif008'
 
-            toAdd='recipientUsername@gmail.com'
+            toAdd='mjtbasif@gmail.com'
             fromAdd=mailUser
 
             subject='PiedLock: Alert'
             header='To: '+toAdd+'\n'+'From: '+fromAdd+'\n'+'Subject: '+subject
 
-            print header+'\n'+body
+            print header+'\n'+msg
 
             s=smtplib.SMTP('smtp.gmail.com',587)
             s.ehlo()
@@ -83,8 +86,21 @@ while i<2:
             s.ehlo()
 
             s.login(mailUser,mailPass)
-            s.sendmail(fromAdd,toAdd,header+'\n\n'+body)
+            s.sendmail(fromAdd,toAdd,header+'\n\n'+msg)
             s.quit()
+	    # Your Account SID from twilio.com/console
+	    account_sid = "account sid"
+            # Your Auth Token from twilio.com/console
+            auth_token  = "auth token"
+
+            client = Client(account_sid, auth_token)
+
+            message = client.messages.create(
+                                     to="user number", 
+                                     from_="my number",
+                                     body=msg)
+
+            print("Message sent")
             
             mFlag=0
         else:
