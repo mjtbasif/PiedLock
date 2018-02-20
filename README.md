@@ -10,7 +10,7 @@ If the system finds any intruder or fire breakout,
 ![Setup](/pictures/IMG_8908.JPG)
 
 # Phone SMS
-![SMS Alart](/pictures/WhatsApp Image 2018-02-19 at 1.24.50 PM.jpeg)
+![SMS]( PiedLock/pictures/WhatsApp Image 2018-02-19 at 1.24.50 PM.jpeg )
 
 # Terminal 
 ![Terminal feed](/pictures/tarminal.png)
