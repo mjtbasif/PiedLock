@@ -16,4 +16,4 @@ If the system finds any intruder or fire breakout,
 ![Terminal feed](/pictures/tarminal.png)
 
 # Hardware components 
-Get hardware list with price and shop location in Bangladesh from <b><a href="/components.xls">here</a></b>
+Get hardware list with price and shop location in Bangladesh from <b><a href="components.xlsx">here</a></b>
