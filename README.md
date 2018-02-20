@@ -8,3 +8,9 @@ If the system finds any intruder or fire breakout,
 
 # Prototype
 ![Setup](/pictures/IMG_8908.JPG)
+
+# Phone SMS
+![SMS Alart](/picture/WhatsApp Image 2018-02-19 at 1.24.50 PM.jpeg)
+
+# Terminal 
+![Terminal feed] (/picture/tarminal.png)
