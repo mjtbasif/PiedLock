@@ -21,5 +21,7 @@ If the system finds any intruder or fire breakout,
   Get hardware list with price and shop location in Bangladesh from <b><a href="components.xlsx">here</a></b>
   # Software
   <a href="https://www.realvnc.com/en/connect/download/viewer/">VNC Viewer</a> for remote desktop. 
-  <a href="http://twilio.com/">Twilio</> for SMS and Call serviece.
+  <br>
+  <a href="http://twilio.com/">Twilio</a> for SMS and Call serviece.
+  <br>
   <a href="www.serversmtp.com/">SMTP Server</a> for sending emails. 
