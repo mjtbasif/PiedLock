@@ -15,5 +15,11 @@ If the system finds any intruder or fire breakout,
 # Terminal 
 ![Terminal feed](/pictures/tarminal.png)
 
-# Hardware components 
-Get hardware list with price and shop location in Bangladesh from <b><a href="components.xlsx">here</a></b>
+# Tools
+  Project requires software and hardware tools. 
+  # Hardware: 
+  Get hardware list with price and shop location in Bangladesh from <b><a href="components.xlsx">here</a></b>
+  # Software
+    1. <a href="https://www.realvnc.com/en/connect/download/viewer/">VNC Viewer</a> for remote desktop. 
+    2. <a href="http://twilio.com/">Twilio</> for SMS and Call serviece.
+    3. <a href="www.serversmtp.com/">SMTP Server</a> for sending emails. 
